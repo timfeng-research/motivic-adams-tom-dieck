@@ -1,0 +1,33 @@
+# Operating system and editor files
+.DS_Store
+._*
+Thumbs.db
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# LaTeX build products; manuscript/main.bbl is deliberately included.
+*.aux
+*.blg
+*.log
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.synctex.gz
+*.xdv
+*.dvi
+*.nav
+*.snm
+*.vrb
+/manuscript/*.pdf
+
+# Local environments and temporary build directories
+.env
+.env.*
+.venv/
+__pycache__/
+/build/
+/tmp/

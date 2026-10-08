@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the paper and the version you used."
+title: "Motivic Adams isomorphism and tom Dieck splitting in characteristic zero"
+authors:
+  - family-names: "Feng"
+    given-names: "Mengzhudong"
+version: "1"
+date-released: "2026-10-08"
+url: "https://github.com/timfeng-research/motivic-adams-tom-dieck"
+preferred-citation:
+  type: unpublished
+  title: "Motivic Adams isomorphism and tom Dieck splitting in characteristic zero"
+  authors:
+    - family-names: "Feng"
+      given-names: "Mengzhudong"
+  year: 2026
+  version: "1"
+  notes: "Preprint, version 1."
+  url: "https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v1"
