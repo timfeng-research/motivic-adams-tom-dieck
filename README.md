@@ -43,4 +43,4 @@ This produces `manuscript/main.pdf`. The published reading copy is `paper.pdf`. 
 
 Questions and corrections are welcome through [GitHub Issues](https://github.com/timfeng-research/motivic-adams-tom-dieck/issues) or [research@timfeng.com](mailto:research@timfeng.com).
 
-Copyright © 2026 Mengzhudong Feng. Copyright is retained by the author; no additional reuse license is granted in this repository. For reuse permission, please contact the author.
+Copyright © 2026 Mengzhudong Feng. The paper, including `paper.pdf`, the LaTeX manuscript source in `manuscript/`, and the corresponding version 1 release PDF and source archive, is licensed under the [Creative Commons Attribution 4.0 International license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). See [LICENSE](LICENSE) for the full terms.
