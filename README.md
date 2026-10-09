@@ -4,7 +4,7 @@
 
 **Preprint · Version 1** · Manuscript dated September 27, 2026 · Released October 8, 2026
 
-[Read the paper (PDF)](paper.pdf) · [Version 1 downloads](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v1) · [LaTeX source](manuscript/) · [Research catalog](https://github.com/timfeng-research/research)
+[Paper webpage](https://www.timfeng.com/research/motivic-adams-tom-dieck) · [Read the paper (PDF)](paper.pdf) · [Version 1 downloads](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v1) · [LaTeX source](manuscript/) · [Research catalog](https://github.com/timfeng-research/research)
 
 This is the first paper in a planned series on equivariant motivic homotopy theory. See the [series index](https://github.com/timfeng-research/research/blob/main/series/motivic-homotopy.md).
 
