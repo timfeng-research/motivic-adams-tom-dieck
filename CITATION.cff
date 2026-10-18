@@ -5,8 +5,8 @@ authors:
   - family-names: "Feng"
     given-names: "Mengzhudong"
 license: CC-BY-4.0
-version: "1"
-date-released: "2026-10-08"
+version: "2"
+date-released: "2026-10-18"
 url: "https://github.com/timfeng-research/motivic-adams-tom-dieck"
 preferred-citation:
   type: unpublished
@@ -15,6 +15,7 @@ preferred-citation:
     - family-names: "Feng"
       given-names: "Mengzhudong"
   year: 2026
-  version: "1"
-  notes: "Preprint, version 1."
-  url: "https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v1"
+  version: "2"
+  date-released: "2026-10-18"
+  notes: "Preprint, version 2."
+  url: "https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v2"

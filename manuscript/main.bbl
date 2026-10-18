@@ -8,179 +8,102 @@
 \begin{thebibliography}{AMGR24}
 
 \bibitem[Alp13]{AlperGMS}
-Jarod Alper, \emph{Good moduli spaces for {Artin} stacks}, Annales de
-  l'Institut Fourier \textbf{63} (2013), no.~6, 2349--2402.
+Jarod Alper, \emph{Good moduli spaces for {Artin} stacks}, Annales de l'Institut Fourier \textbf{63} (2013), no.~6, 2349--2402.
 
 \bibitem[AMGR24]{AMGR}
-David Ayala, Aaron Mazel-Gee, and Nick Rozenblyum, \emph{Stratified
-  noncommutative geometry}, vol. 297, Memoirs of the American Mathematical
-  Society, no. 1485, American Mathematical Society, Providence, RI, 2024,
-  Numbering: arXiv version 5 (2023), not the published version;
-  \url{https://arxiv.org/abs/1910.14602v5}.
+David Ayala, Aaron Mazel-Gee, and Nick Rozenblyum, \emph{Stratified noncommutative geometry}, vol. 297, Memoirs of the American Mathematical Society, no. 1485, American Mathematical Society, Providence, RI, 2024, Numbering: arXiv version 5 (2023), not the published version; \url{https://arxiv.org/abs/1910.14602v5}.
 
 \bibitem[Bac22]{bac22}
-Tom Bachmann, \emph{Motivic spectral {Mackey} functors}, 2022, Version 2;
-  \url{https://arxiv.org/abs/2205.13926v2}.
+Tom Bachmann, \emph{Motivic spectral {Mackey} functors}, 2022, Version 2; \url{https://arxiv.org/abs/2205.13926v2}.
 
 \bibitem[CD25]{ChowdhuryDAngelo}
-Chirantan Chowdhury and Alessandro D'Angelo, \emph{Non-representable
-  six-functor formalisms}, 2025, Version 2;
-  \url{https://arxiv.org/abs/2409.20382v2}.
+Chirantan Chowdhury and Alessandro D'Angelo, \emph{Non-representable six-functor formalisms}, 2025, Version 2; \url{https://arxiv.org/abs/2409.20382v2}.
 
-\bibitem[CLL24]{CLLAdams}
-Bastiaan Cnossen, Tobias Lenz, and Sil Linskens, \emph{The {Adams} isomorphism
-  revisited}, Mathematische Zeitschrift \textbf{308} (2024), Paper No.~33,
-  32~pp.
+\bibitem[CGR08]{CGR08}
+Vladimir Chernousov, Philippe Gille, and Zinovy Reichstein, \emph{Reduction of structure for torsors over semilocal rings}, Manuscripta Mathematica \textbf{126} (2008), no.~4, 465--480, Numbering: arXiv version 1 (2007); \url{https://arxiv.org/abs/0710.2064v1}.
 
 \bibitem[Con14]{ConradReductive}
-Brian Conrad, \emph{Reductive group schemes}, Autour des sch{\'e}mas en
-  groupes. Vol. I, Panoramas et Synth{\`e}ses, vol. 42--43, Soci{\'e}t{\'e}
-  Math{\'e}matique de France, Paris, 2014,
-  \url{https://math.stanford.edu/~conrad/papers/luminysga3smf.pdf},
-  pp.~93--444.
+Brian Conrad, \emph{Reductive group schemes}, Autour des sch{\'e}mas en groupes. Vol. I, Panoramas et Synth{\`e}ses, vol. 42--43, Soci{\'e}t{\'e} Math{\'e}matique de France, Paris, 2014, \url{https://math.stanford.edu/~conrad/papers/luminysga3smf.pdf}, pp.~93--444.
 
 \bibitem[CTHS05]{CTHS}
-Jean-Louis Colliot-Th{\'e}l{\`e}ne, David Harari, and Alexei~N. Skorobogatov,
-  \emph{Compactification {\'e}quivariante d'un tore (d'apr{\`e}s {Brylinski} et
-  {K{\"u}nnemann})}, Expositiones Mathematicae \textbf{23} (2005), no.~2,
-  161--170, Numbering: author manuscript of 16 May 2003;
-  \url{https://www.imo.universite-paris-saclay.fr/~jean-louis.colliot-thelene/cpctore160503.pdf}.
+Jean-Louis Colliot-Th{\'e}l{\`e}ne, David Harari, and Alexei~N. Skorobogatov, \emph{Compactification {\'e}quivariante d'un tore (d'apr{\`e}s {Brylinski} et {K{\"u}nnemann})}, Expositiones Mathematicae \textbf{23} (2005), no.~2, 161--170, Numbering: author manuscript of 16 May 2003; \url{https://www.imo.universite-paris-saclay.fr/~jean-louis.colliot-thelene/cpctore160503.pdf}.
 
 \bibitem[GH23]{GH}
-David Gepner and Jeremiah Heller, \emph{The {tom Dieck} splitting theorem in
-  equivariant motivic homotopy theory}, Journal of the Institute of Mathematics
-  of Jussieu \textbf{22} (2023), no.~3, 1181--1250, Numbering: arXiv version 1
-  (2019); \url{https://arxiv.org/abs/1910.11485v1}.
+David Gepner and Jeremiah Heller, \emph{The {tom Dieck} splitting theorem in equivariant motivic homotopy theory}, Journal of the Institute of Mathematics of Jussieu \textbf{22} (2023), no.~3, 1181--1250, Numbering: arXiv version 1 (2019); \url{https://arxiv.org/abs/1910.11485v1}.
 
 \bibitem[GM95]{GreenleesMayTate}
-J.~P.~C. Greenlees and J.~P. May, \emph{Generalized {Tate} cohomology}, vol.
-  113, Memoirs of the American Mathematical Society, no. 543, American
-  Mathematical Society, Providence, RI, 1995,
-  \url{https://doi.org/10.1090/memo/0543}.
+J.~P.~C. Greenlees and J.~P. May, \emph{Generalized {Tate} cohomology}, vol. 113, Memoirs of the American Mathematical Society, no. 543, American Mathematical Society, Providence, RI, 1995, \url{https://doi.org/10.1090/memo/0543}.
 
-\bibitem[HO16]{HellerOrmsbyGalois}
-Jeremiah Heller and Kyle Ormsby, \emph{{Galois} equivariance and stable motivic
-  homotopy theory}, Transactions of the American Mathematical Society
-  \textbf{368} (2016), no.~11, 8047--8077, Numbering follows arXiv version 3;
-  \url{https://arxiv.org/abs/1401.4728v3}.
+\bibitem[HO15]{HellerOrmsbyGalois}
+Jeremiah Heller and Kyle Ormsby, \emph{Galois equivariance and stable motivic homotopy theory}, 2015, Version 3; \url{https://arxiv.org/abs/1401.4728v3}.
 
 \bibitem[Hoy17]{Hoyois}
-Marc Hoyois, \emph{The six operations in equivariant motivic homotopy theory},
-  Advances in Mathematics \textbf{305} (2017), 197--279, Corrected arXiv
-  version 5 (2024); \url{https://arxiv.org/abs/1509.02145v5}.
+Marc Hoyois, \emph{The six operations in equivariant motivic homotopy theory}, Advances in Mathematics \textbf{305} (2017), 197--279, Corrected arXiv version 5 (2024); \url{https://arxiv.org/abs/1509.02145v5}.
 
 \bibitem[HR15]{HallRydhGroups}
-Jack Hall and David Rydh, \emph{Algebraic groups and compact generation of
-  their derived categories of representations}, Indiana University Mathematics
-  Journal \textbf{64} (2015), no.~6, 1903--1923, Author version of 3 December
-  2015;
-  \url{https://davidrydh.se/papers/classifying-stacks-compact20151203.pdf}.
+Jack Hall and David Rydh, \emph{Algebraic groups and compact generation of their derived categories of representations}, Indiana University Mathematics Journal \textbf{64} (2015), no.~6, 1903--1923, Author version of 3 December 2015; \url{https://davidrydh.se/papers/classifying-stacks-compact20151203.pdf}.
 
 \bibitem[IZ16]{IllusieZheng}
-Luc Illusie and Weizhe Zheng, \emph{Quotient stacks and equivariant {\'e}tale
-  cohomology algebras: {Quillen}'s theory revisited}, Journal of Algebraic
-  Geometry \textbf{25} (2016), no.~2, 289--400,
-  \url{https://arxiv.org/abs/1305.0365v5}.
+Luc Illusie and Weizhe Zheng, \emph{Quotient stacks and equivariant {\'e}tale cohomology algebras: {Quillen}'s theory revisited}, Journal of Algebraic Geometry \textbf{25} (2016), no.~2, 289--400, \url{https://arxiv.org/abs/1305.0365v5}.
 
 \bibitem[Kha21]{Khan}
-Adeel~A. Khan, \emph{Voevodsky's criterion for constructible categories of
-  coefficients}, 2021, Unpublished notes, dated 25 January 2021, with revisions
-  dated 17 March 2023; accessed 24 September 2026;
-  \url{https://www.preschema.com/papers/six.pdf}.
+Adeel~A. Khan, \emph{Voevodsky's criterion for constructible categories of coefficients}, 2021, Unpublished notes, dated 25 January 2021, with revisions dated 17 March 2023; accessed 24 September 2026; \url{https://www.preschema.com/papers/six.pdf}.
 
 \bibitem[Kha25]{KhanLisse}
-\bysame, \emph{Lisse extensions of weaves}, 2025, Version 2;
-  \url{https://arxiv.org/abs/2501.04114v2}.
+\bysame, \emph{Lisse extensions of weaves}, 2025, Version 2; \url{https://arxiv.org/abs/2501.04114v2}.
 
 \bibitem[Kle01]{KleinDualizing}
-John~R. Klein, \emph{The dualizing spectrum of a topological group},
-  Mathematische Annalen \textbf{319} (2001), no.~3, 421--456,
-  \url{https://doi.org/10.1007/s002080100147}.
+John~R. Klein, \emph{The dualizing spectrum of a topological group}, Mathematische Annalen \textbf{319} (2001), no.~3, 421--456, \url{https://doi.org/10.1007/s002080100147}.
 
 \bibitem[KR24]{KhanRaviStacks}
-Adeel~A. Khan and Charanya Ravi, \emph{Generalized cohomology theories for
-  algebraic stacks}, Advances in Mathematics \textbf{458} (2024), 109975,
-  Numbering follows arXiv version 5; \url{https://arxiv.org/abs/2106.15001v5}.
+Adeel~A. Khan and Charanya Ravi, \emph{Generalized cohomology theories for algebraic stacks}, 2024, Version 5; \url{https://arxiv.org/abs/2106.15001v5}.
 
 \bibitem[KR25]{KhanRavi}
-\bysame, \emph{Equivariant generalized cohomology via stacks}, 2025, Version 7;
-  \url{https://arxiv.org/abs/2209.07801v7}.
+\bysame, \emph{Equivariant generalized cohomology via stacks}, 2025, Version 7; \url{https://arxiv.org/abs/2209.07801v7}.
 
 \bibitem[LA15]{LA}
-Giancarlo Lucchini~Arteche, \emph{Groupe de {Brauer} non ramifi{\'e}
-  alg{\'e}brique des espaces homog{\`e}nes}, Transformation Groups \textbf{20}
-  (2015), 463--493, Numbering: arXiv version 4;
-  \url{https://arxiv.org/abs/1312.3103v4}.
+Giancarlo Lucchini~Arteche, \emph{Groupe de {Brauer} non ramifi{\'e} alg{\'e}brique des espaces homog{\`e}nes}, Transformation Groups \textbf{20} (2015), 463--493, Numbering: arXiv version 4; \url{https://arxiv.org/abs/1312.3103v4}.
 
 \bibitem[Lun73]{Luna}
-Domingo Luna, \emph{Slices {\'e}tales}, M{\'e}moires de la Soci{\'e}t{\'e}
-  Math{\'e}matique de France \textbf{33} (1973), 81--105,
-  \url{https://numdam.org/item/10.24033/msmf.110.pdf}.
+Domingo Luna, \emph{Slices {\'e}tales}, M{\'e}moires de la Soci{\'e}t{\'e} Math{\'e}matique de France \textbf{33} (1973), 81--105, \url{https://numdam.org/item/10.24033/msmf.110.pdf}.
 
 \bibitem[Lur18]{Kerodon}
-Jacob Lurie, \emph{Kerodon}, \url{https://kerodon.net}, 2018, Accessed October
-  2, 2026.
+Jacob Lurie, \emph{Kerodon}, \url{https://kerodon.net}, 2018, Accessed October 2, 2026.
 
 \bibitem[Mil17]{MilneAG}
-J.~S. Milne, \emph{Algebraic groups: The theory of group schemes of finite type
-  over a field}, Cambridge Studies in Advanced Mathematics, vol. 170, Cambridge
-  University Press, 2017, Numbering follows the corrected reprint (2022);
-  \url{https://www.jmilne.org/math/Books/iAG2022.pdf}.
+J.~S. Milne, \emph{Algebraic groups: The theory of group schemes of finite type over a field}, Cambridge Studies in Advanced Mathematics, vol. 170, Cambridge University Press, 2017.
 
 \bibitem[Mil18]{MilneReductiveGroups}
-\bysame, \emph{Reductive groups}, Course notes, 2018, Version 2.00, March 10,
-  2018. \url{https://www.jmilne.org/math/CourseNotes/RG.pdf}.
+\bysame, \emph{Reductive groups}, Course notes, 2018, Version 2.00, March 10, 2018. \url{https://www.jmilne.org/math/CourseNotes/RG.pdf}.
 
 \bibitem[NS18]{NikolausScholze}
-Thomas Nikolaus and Peter Scholze, \emph{On topological cyclic homology}, Acta
-  Mathematica \textbf{221} (2018), no.~2, 203--409,
-  \url{https://doi.org/10.4310/ACTA.2018.v221.n2.a1}; numbering follows the
-  published version.
+Thomas Nikolaus and Peter Scholze, \emph{On topological cyclic homology}, Acta Mathematica \textbf{221} (2018), no.~2, 203--409, \url{https://doi.org/10.4310/ACTA.2018.v221.n2.a1}; numbering follows the published version.
 
 \bibitem[Rak26]{RaksitTate}
-Arpon Raksit, \emph{Notes on {Tate} cohomology}, 2026, Version 2, 20 July 2026;
-  \url{https://arxiv.org/abs/2601.17677v2}.
+Arpon Raksit, \emph{Notes on {Tate} cohomology}, 2026, Version 2, 20 July 2026; \url{https://arxiv.org/abs/2601.17677v2}.
 
 \bibitem[Ree23]{ReevesHyperspherical}
-Wyatt Reeves, \emph{Hyperspherical varieties}, Notes for the Harvard Relative
-  Langlands Seminar, 2023, Updated November 6, 2023.
-  \url{https://www.math.toronto.edu/bgammage/Hyperspherical.pdf}.
+Wyatt Reeves, \emph{Hyperspherical varieties}, Notes for the Harvard Relative Langlands Seminar, 2023, Updated November 6, 2023. \url{https://www.math.toronto.edu/bgammage/Hyperspherical.pdf}.
 
 \bibitem[Ric82]{RichardsonOrbits}
-R.~W. Richardson, \emph{On orbits of algebraic groups and {Lie} groups},
-  Bulletin of the Australian Mathematical Society \textbf{25} (1982), no.~1,
-  1--28, \url{https://doi.org/10.1017/S0004972700005013}.
+R.~W. Richardson, \emph{On orbits of algebraic groups and {Lie} groups}, Bulletin of the Australian Mathematical Society \textbf{25} (1982), no.~1, 1--28, \url{https://doi.org/10.1017/S0004972700005013}.
 
 \bibitem[Rog08]{RognesDualizable}
-John Rognes, \emph{Stably dualizable groups}, Memoirs of the American
-  Mathematical Society \textbf{192} (2008), no.~898, 99--132, Second paper in
-  the memoir; theorem numbering checked against
-  \url{https://arxiv.org/abs/math/0502184v2}.
+John Rognes, \emph{Stably dualizable groups}, Memoirs of the American Mathematical Society \textbf{192} (2008), no.~898, 99--132, Second paper in the memoir; theorem numbering checked against \url{https://arxiv.org/abs/math/0502184v2}.
 
 \bibitem[Rom22]{RomagnyFixedPoints}
-Matthieu Romagny, \emph{Algebraicity and smoothness of fixed point stacks},
-  2022, Version 3, September 16, 2022;
-  \url{https://arxiv.org/abs/2205.11114v3}.
+Matthieu Romagny, \emph{Algebraicity and smoothness of fixed point stacks}, 2022, Version 3, September 16, 2022; \url{https://arxiv.org/abs/2205.11114v3}.
 
 \bibitem[San19]{SandersAdams}
-Beren Sanders, \emph{The compactness locus of a geometric functor and the
-  formal construction of the {Adams} isomorphism}, Journal of Topology
-  \textbf{12} (2019), no.~2, 287--327,
-  \url{https://doi.org/10.1112/topo.12089}.
+Beren Sanders, \emph{The compactness locus of a geometric functor and the formal construction of the {Adams} isomorphism}, Journal of Topology \textbf{12} (2019), no.~2, 287--327, \url{https://doi.org/10.1112/topo.12089}.
 
 \bibitem[Tem12]{Temkin}
-Michael Temkin, \emph{Functorial desingularization of quasi-excellent schemes
-  in characteristic zero: the nonembedded case}, Duke Mathematical Journal
-  \textbf{161} (2012), no.~11, 2207--2254,
-  \url{https://arxiv.org/abs/0904.1592v2}.
+Michael Temkin, \emph{Functorial desingularization of quasi-excellent schemes in characteristic zero: the nonembedded case}, Duke Mathematical Journal \textbf{161} (2012), no.~11, 2207--2254, \url{https://arxiv.org/abs/0904.1592v2}.
 
 \bibitem[{The}26]{Stacks}
-{The Stacks Project Authors}, \emph{{The Stacks Project}}, 2026, Accessed 27
-  September 2026; \url{https://stacks.math.columbia.edu}.
+{The Stacks Project Authors}, \emph{{The Stacks Project}}, 2026, Accessed 27 September 2026; \url{https://stacks.math.columbia.edu}.
 
 \bibitem[Voe03]{VoevodskyPower}
-Vladimir Voevodsky, \emph{Reduced power operations in motivic cohomology},
-  Publications Math{\'e}matiques de l'IH{\'E}S \textbf{98} (2003), 1--57,
-  \url{https://doi.org/10.1007/s10240-003-0009-z}.
+Vladimir Voevodsky, \emph{Reduced power operations in motivic cohomology}, Publications Math{\'e}matiques de l'IH{\'E}S \textbf{98} (2003), 1--57, \url{https://doi.org/10.1007/s10240-003-0009-z}.
 
 \end{thebibliography}

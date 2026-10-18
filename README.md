@@ -2,9 +2,9 @@
 
 **Mengzhudong Feng** · Independent researcher · [research@timfeng.com](mailto:research@timfeng.com)
 
-**Preprint · Version 1** · Manuscript dated September 27, 2026 · Released October 8, 2026
+**Preprint · Version 2** · Revised and released October 18, 2026 · First released October 8, 2026
 
-[Paper webpage](https://www.timfeng.com/research/motivic-adams-tom-dieck) · [Read the paper (PDF)](paper.pdf) · [Version 1 downloads](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v1) · [LaTeX source](manuscript/) · [Research catalog](https://github.com/timfeng-research/research)
+[Paper webpage](https://www.timfeng.com/research/motivic-adams-tom-dieck) · [Read version 2 (PDF)](paper.pdf) · [Version 2 downloads](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v2) · [LaTeX source](manuscript/) · [Research catalog](https://github.com/timfeng-research/research)
 
 This is the first paper in a planned series on equivariant motivic homotopy theory. See the [series index](https://github.com/timfeng-research/research/blob/main/series/motivic-homotopy.md).
 
@@ -24,9 +24,16 @@ In my view, these strict endorsement requirements create an unnecessary barrier 
 
 Please cite the paper and the version you used:
 
-> Mengzhudong Feng. *Motivic Adams isomorphism and tom Dieck splitting in characteristic zero*. Preprint, version 1, 2026. https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v1
+> Mengzhudong Feng. *Motivic Adams isomorphism and tom Dieck splitting in characteristic zero*. Preprint, version 2, 2026. https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v2
 
-Machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff). The [v1 release](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v1) contains the PDF and a standalone source ZIP. See [CHANGELOG.md](CHANGELOG.md) for subsequent public versions.
+Machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff). The repository files contain the latest version. Each numbered release preserves its PDF and standalone LaTeX source archive.
+
+| Version | Released | Changes and downloads |
+| --- | --- | --- |
+| **[Version 2](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v2)** | October 18, 2026 | Expanded twist calculations and explicit splitting examples; revised exposition, proofs, and references. |
+| [Version 1](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v1) | October 8, 2026 | Original public release; manuscript dated September 27, 2026. |
+
+See [CHANGELOG.md](CHANGELOG.md) for details. Numbering has changed between versions; use the version you cite when referring to a numbered result.
 
 ## Build the manuscript
 
@@ -43,4 +50,4 @@ This produces `manuscript/main.pdf`. The published reading copy is `paper.pdf`. 
 
 Questions and corrections are welcome through [GitHub Issues](https://github.com/timfeng-research/motivic-adams-tom-dieck/issues) or [research@timfeng.com](mailto:research@timfeng.com).
 
-Copyright © 2026 Mengzhudong Feng. The paper, including `paper.pdf`, the LaTeX manuscript source in `manuscript/`, and the corresponding version 1 release PDF and source archive, is licensed under the [Creative Commons Attribution 4.0 International license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). See [LICENSE](LICENSE) for the full terms.
+Copyright © 2026 Mengzhudong Feng. The paper, including `paper.pdf`, the LaTeX manuscript source in `manuscript/`, and the version 1 and version 2 release PDFs and source archives, is licensed under the [Creative Commons Attribution 4.0 International license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). See [LICENSE](LICENSE) for the full terms.

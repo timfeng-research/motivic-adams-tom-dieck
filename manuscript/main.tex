@@ -10,15 +10,8 @@
 \usepackage{tikz-cd}
 \usepackage{xcolor}
 \usepackage{hyperref}
-
-\hypersetup{
-  colorlinks=true,
-  linkcolor=blue!50!black,
-  citecolor=blue!50!black,
-  urlcolor=blue!50!black,
-  pdftitle={Motivic Adams isomorphism and tom Dieck splitting in characteristic zero},
-  pdfauthor={Mengzhudong Feng}
-}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black,
+pdftitle={Motivic Adams isomorphism and tom Dieck splitting in characteristic zero},pdfauthor={Mengzhudong Feng}}
 \setlength{\emergencystretch}{2em}
 \setlist[enumerate]{label=(\roman*),leftmargin=2.5em}
 \newtheorem{theorem}{Theorem}[section]
@@ -37,6 +30,7 @@
 \newtheorem*{splittingtheorem}{Theorem C}
 \numberwithin{equation}{section}
 \newcommand{\SH}{\mathrm{SH}}
+\newcommand{\Sp}{\mathrm{Sp}}
 \newcommand{\one}{\mathbf 1}
 \newcommand{\A}{\mathbb A}
 \newcommand{\Pj}{\mathbb P}
@@ -44,8 +38,10 @@
 \newcommand{\Sm}{\mathrm{Sm}}
 \newcommand{\lis}{\mathrm{lis}}
 \newcommand{\free}{\mathrm{free}}
+\newcommand{\et}{\mathrm{\acute et}}
 \newcommand{\Hom}{\underline{\operatorname{Hom}}}
 \DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Fun}{Fun}
 \DeclareMathOperator{\Nat}{Nat}
 \DeclareMathOperator{\Ind}{Ind}
 \DeclareMathOperator{\Lan}{Lan}
@@ -53,20 +49,26 @@
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Th}{Th}
 \DeclareMathOperator{\cofib}{cofib}
+\DeclareMathOperator{\fib}{fib}
 \DeclareMathOperator*{\colim}{colim}
 \DeclareMathOperator*{\limm}{lim}
 \newcommand{\Nm}{\operatorname{Nm}}
+\newcommand{\incl}{\iota}
 \newcommand{\cont}{\mathrm{cont}}
 \newcommand{\C}{\mathcal C}
 \newcommand{\D}{\mathcal D}
 \newcommand{\F}{\mathcal F}
 \newcommand{\X}{\mathcal X}
 \newcommand{\Y}{\mathcal Y}
+\newcommand{\E}{\mathcal E}
+\newcommand{\B}{\mathcal B}
+\newcommand{\smashto}{\longrightarrow}
+
 
 \title[Motivic Adams Isomorphism]{Motivic Adams isomorphism and tom Dieck splitting in characteristic zero}
 \author{Mengzhudong Feng}
 \email{research@timfeng.com}
-\date{September 27, 2026}
+\date{Version 2, October 18, 2026}
 
 \begin{document}
 \begin{abstract}
@@ -77,12 +79,11 @@ We calculate the twist for finite groups and split tori, and show why
 it need not be a constant sphere for a split reductive group.
 We show that geometric fixed points identify each isotropy layer with the lisse
 motivic category of its Weyl group.
-Over an algebraically closed field, a normalizer transfer and an
+Over an algebraically closed field, a normalizer transfer and a
 isotropy filtration argument give a twisted tom Dieck splitting
-for \(G\)-split spectra, including suspension spectra.
+for split spectra, including suspension spectra.
 \end{abstract}
 \maketitle
-
 \setcounter{tocdepth}{1}
 \tableofcontents
 \section{Introduction}\label{sec:introduction}
@@ -90,34 +91,28 @@ for \(G\)-split spectra, including suspension spectra.
 Equivariant homotopy theory studies an object together with its group action.
 Two fundamental constructions in equivariant homotopy theory are orbits and fixed points.
 An Adams isomorphism relates these constructions on the objects with free actions.
-A tom Dieck splitting identifies the fixed points of a
+Whereas a tom Dieck splitting goes further, it identifies the fixed points of a
 suspension spectrum with a sum of contributions from subgroups.
-The motivic versions consider objects in equivariant algebraic geometry, 
+The motivic versions consider objects in equivariant algebraic geometry,
 and hence account for torsors and for the geometry of
 the group schemes.
 
 For finite groups of order invertible on the base, Gepner and Heller
 proved the motivic Adams isomorphism and the tom Dieck splitting theorem
-\cite[Theorems~6.33 and 7.4]{GH}. 
-The main tools used in their paper include isotropy filtrations, duality, 
-and ambidexterity for finite \'etale maps. 
-For earlier motivic Adams and Wirthm\"uller maps under
-properness hypotheses, see \cite[Section~1.4.1]{Hoyois}.
+\cite[Theorems~6.33 and 7.4]{GH}.
+The main tools used in their paper include isotropy filtrations, duality,
+and ambidexterity for finite \'etale maps.
 
-Following their foundational work, we extend the motivic
-Adams isomorphism to smooth affine linearly reductive groups
-over arbitrary fields of characteristic zero, including
-nonsplit groups.
-We prove the corresponding twisted tom Dieck splitting for
-\(G\)-split spectra over algebraically closed fields of
-characteristic zero, and for split diagonalizable groups
-over arbitrary fields of characteristic zero.
+Following their foundational work, the present paper extends their result to
+smooth affine linearly reductive groups in characteristic zero.
+These include connected reductive groups and
+their finite extensions. Nonsplit groups are allowed.
 
 For local systems of spectra, the continuous approximation to cohomology
 is homology twisted by the Spivak--Klein dualizing spectrum
 \cite[Theorem~I.4.1 and Definition~I.4.2]{NikolausScholze}.
 Our diagonal twist and continuous Adams map have the same formal shape.
-The proofs use motivic duality and descent.
+The proofs use the motivic duality and descent arguments.
 For earlier topological constructions, see
 \cite[Theorem~D and Definition~1.3]{KleinDualizing} and
 \cite[Definition~5.2.2]{RognesDualizable}.
@@ -129,7 +124,7 @@ The genuine category \(\SH^G(S)\) also records isotropy and inverts
 representation spheres.
 Its free subcategory identifies with \(\SH(BG_S)\).
 This identification (and its companions) plays a core role in the paper.
-Namely, we use them to pass from a lisse statement to a genuine statement.  
+Namely, we use them to pass from a lisse statement to a genuine statement.
 
 \subsection{Lisse Adams and its twist}
 
@@ -200,9 +195,8 @@ It gives a finite subgroup \(H\subset G\) such that every
 We explain why \(BH_S\to BG_S\) then has Nisnevich local sections.
 This gives a conservative pullback and a collection of compact generators in \(\SH(BG_S)\).
 The finite group motivic Adams theorem applies to these generators.
-The general motivic Adams isomorphism then follows from the
-finite group case by a calculation with the graph of
-\(BH_S\to BG_S\).
+The general motivic Adams then follows from the finite group case
+by a calculation with the graph of \(BH_S\to BG_S\).
 
 For a finite \'etale group, \(\mu_f=\one\).
 For a split torus of rank \(r\), \(\mu_f=S^{r,r}\).
@@ -240,14 +234,9 @@ The object
 \]
 selects the corresponding layer of \(H\).
 
-The geometric fixed-point functor \(\Phi^H\) first restricts
-to \(N_H\), then takes geometric \(H\)-fixed points.
-Composing with restriction to the lisse category gives
-\[
- \Phi_{\lis}^H
- :=i_{W_H}^*\Phi^H:
- \SH^G(S)\longrightarrow\SH(BW_{H,S}).
-\]
+The geometric fixed-point functor \(\Phi^H\) first restricts to \(N_H\), then
+takes geometric \(H\)-fixed points. Restricting \(\Phi^H\) to the
+lisse \(W_H\)-category \(\SH(BW_H)\) gives a functor \(\Phi_{\lis}^H\).
 
 \begin{layertheorem}[Single layer identification]
 There is an equivalence
@@ -270,16 +259,17 @@ For an affine smooth scheme with linearly reductive classes bounded by \(H\),
 Luna's slice theorem identifies the maximal isotropy locus with
 \(G\times_{N_H}X^H\).
 Its complement and punctured normal bundle have strictly smaller isotropy.
-Homotopy purity therefore identifies the \(H\)-layers of the
-motives of \(G\times_{N_H}X^H\) and \(X\).
+Homotopy purity therefore identifies the \(H\)-layer its motive with the \(H\)-layer
+of the motive of \(X\).
 A Jouanolou replacement extends this argument to the compact generators
 of \(\SH^G(S)\).
 
-An exhaustive filtration need not split, and the
-identification of its layers does not determine their gluing.
-Theorem~B identifies individual layers.
-Theorem~C gives a splitting of categorical fixed points for
-spectra equipped with the specified fixed-point sections.
+An exhaustive filtration need not split.
+It also does not by itself describe the gluing functors that reconstruct
+the entire category from its layers.
+While Theorem~B only concerns the single layers,
+we also prove an additional splitting statement of the entire category if the required
+sections are available.
 
 \subsection{The tom Dieck splitting}
 
@@ -333,13 +323,11 @@ In characteristic \(p>0\), a smooth affine linearly reductive group is
 an extension of a finite etale group by a torus.
 An invariant toric compactification gives the following result.
 
-\begin{charptheorem}[Integral invertibility]
+\begin{charptheorem}[Invertibility]
 Let \(k\) have characteristic \(p>0\), let \(G/k\) be smooth affine and
 linearly reductive, and let \(S/k\) be smooth and quasiprojective.
 Then \(\mu_f\) is invertible in \(\SH(BG_S)\), with inverse
 \(q_{1\sharp}D(\Delta_\sharp\one)\).
-This assertion is integral and has no condition on the splitting
-degree of the torus.
 \end{charptheorem}
 
 Appendix~\ref{subsec:new-charp-twist} proves Theorem~D.
@@ -350,12 +338,16 @@ The characteristic-zero proofs use resolution, finite torsor detection,
 and Levi subgroups at separate points.
 These uses should not be conflated with invertibility of the twist.
 
-In a sequel, we plan to study arithmetic and
-positive-characteristic extensions of the Adams isomorphism
-and tom Dieck splitting.
-Following the gerbe-indexed approach of Bachmann
-\cite[Section~1.2.2]{bac22}, we will investigate how Weyl
-gerbes encode the descent data of geometric stabilizer classes.
+In a sequel, we will treat the Adams isomorphism and tom Dieck splitting
+over arbitrary fields and in positive characteristic.
+The extension will use fixed points indexed by gerbes,
+following the approach of Bachmann
+\cite[Section~1.2.2]{bac22}.
+We will group geometric stabilizer classes into Galois orbits and
+describe the corresponding isotropy layers over Weyl gerbes.
+These gerbes retain the descent data even when a geometric conjugacy
+class has no subgroup representative over its base field.
+
 
 \subsection*{Organization and conventions}
 
@@ -409,7 +401,7 @@ fixed scheme or unstable fixed point space.
 The distinction will be clear from the context.
 For a smooth representable map \(a\), our purity convention is
 \[
- a_\sharp=a_!(-\otimes\Th(T_a)).
+ a_\sharp \simeq a_!(-\otimes\Th(T_a)).
 \]
 In particular, a trivial rank-\(d\) bundle has Thom object \(S^{2d,d}\).
 
@@ -428,7 +420,20 @@ of mathematical arguments.
 The author takes responsibility for the mathematical claims, proofs,
 references, and final text.
 
+
 \section{Motivic categories and adjunctions}\label{sec:formalism}
+
+Throughout, we use \emph{motive} in the sense of stable motivic
+homotopy theory. For a smooth morphism of schemes \(p:Y\to S\),
+the motive of \(Y\) over \(S\) is
+\[
+ p_\sharp\one_Y\simeq\Sigma^\infty Y_+\in\SH(S).
+\]
+This is its stable motivic homotopy type.
+For a smooth map \(a:\Y\to\X\) in the lisse formalism, we
+likewise call \(a_\sharp\one_\Y\in\SH(\X)\) its relative
+motive.
+
 
 \subsection{The lisse category}
 For an algebraic stack \(\X\), its lisse motivic category is the limit
@@ -439,7 +444,7 @@ For an algebraic stack \(\X\), its lisse motivic category is the limit
 Here \(\operatorname{Lis}(\X)\) has smooth finite type schemes over \(\X\) as objects
  and all morphisms over \(\X\) as arrows.
 The connecting morphisms are pullback functors.
-An object of \(\SH(\X)\) consists of motivic spectra on smooth schemes, 
+An object of \(\SH(\X)\) consists of motivic spectra on smooth schemes,
 with compatible pullback identifications.
 This construction agrees with ordinary \(\SH\) on schemes.
 We use the comparison and descent results of Khan and Ravi
@@ -489,7 +494,7 @@ They follow from \cite[Proposition~C.1(iii)]{ChowdhuryDAngelo}.
 The genuine category \(\SH^G(S)\) is built on smooth equivariantly
 quasiprojective \(G\)-schemes over \(S\).
 One imposes equivariant Nisnevich excision and invariance under torsors
-under equivariant vector bundles (i.e., equivariant affine bundles), 
+under equivariant vector bundles (i.e., equivariant affine bundles),
 then invert equivariant Thom spheres. See \cite[Sections~3 and 6]{Hoyois}.
 An equivariant Nisnevich distinguished square consists of an invariant
 open immersion and an equivariant etale map that is an isomorphism
@@ -515,7 +520,7 @@ For a scheme \(U\), the motivic category \(\SH(U)\) is compactly generated by
 \[
  \Sigma^{m,n}v_\sharp\one_V,\qquad v:V\to U\text{ smooth}.
 \]
-For the lisse motivic category \(\SH(\X)\), take a smooth scheme chart \(j:U\to\X\). 
+For the lisse motivic category \(\SH(\X)\), take a smooth scheme chart \(j:U\to\X\).
 Then the objects \(j_\sharp C\), with \(C\) ranging over the above generators, are compact.
 Indeed, \(j^*\) preserves colimits, so adjunction gives
 \[
@@ -644,7 +649,7 @@ Suppose
 is dualizable.
 Put \(K=p_*L\).
 There is an equivalence \(b:L\simeq l_*K\) such that \(p_*b=\mathrm{id}_K\).
-If \(\epsilon:p^*K\to L\) is the counit, and if \(\eta_l\) is the unit 
+If \(\epsilon:p^*K\to L\) is the counit, and if \(\eta_l\) is the unit
 for the adjunction \(l^* \dashv l_*\), then
 \begin{equation}\label{eq:section-unit}
  b\epsilon=\eta_l:p^*K\longrightarrow l_*K.
@@ -668,16 +673,14 @@ Projection and \eqref{eq:closed-adjunction} give
  l_*N=\Hom(L,p^*N)=DL\otimes p^*N.
 \end{equation}
 Thus \(l_*\) preserves colimits and has a right adjoint \(l^\sharp\).
-Applying Lemma~\ref{lem:abstract-duality} to
-\(A=\one_C\) and \(B=\one_E\) gives
+Apply Lemma~\ref{lem:abstract-duality} to \(A=\one_C\), \(B=\one_E\), gives
 \[
  L\simeq l_*l^\sharp\one_E.
 \]
 Apply \(p_*\).
 Since \(p_*l_*=\mathrm{id}\), this identifies \(l^\sharp\one_E\) with \(K\).
 
-Both sides of \eqref{eq:section-unit} correspond to
-\(\mathrm{id}_K\) under \(p^*\dashv p_*\).
+\eqref{eq:section-unit} correspond to \(\mathrm{id}_K\) under \(p^*\dashv p_*\).
 For the right side, this follows from the unit of the composite adjunction associated with \(pl=\mathrm{id}\).
 
 The direct image formula in \eqref{eq:section-direct-image} rewrites \(b\) as
@@ -702,6 +705,7 @@ It is not the exceptional inverse image \(l^!\).
 The proof establishes its existence in the particular situation where it is used.
 \end{remark}
 
+
 \begin{remark}\label{rem:new-section-sign}
 Write \(\sigma_l=l^\sharp\one_E\).
 The lemma gives \(\sigma_l=K\), so
@@ -709,6 +713,7 @@ The lemma gives \(\sigma_l=K\), so
  DL\simeq L\otimes p^*(\sigma_l)^{-1}.
 \]
 \end{remark}
+
 
 \section{Dualizing twists}
 \label{sec:new-twist}\label{sec:duality}
@@ -748,7 +753,7 @@ Purity gives \(q_*C=q_\sharp(C\otimes\Th(-T_q))\), so \(q_*C\) is also dualizabl
 For the genuine category these properties are
 \cite[Theorems~6.9 and 6.18]{Hoyois}.
 
-Let \(z\) be the structure map of \(Z\). 
+Let \(z\) be the structure map of \(Z\).
 We claim that \(z_*\Th(V)\) is dualizable whenever \(Z\) is proper and \(J\)-quasiprojective
 and \(V\) is an equivariant vector bundle on \(Z\).
 Nilpotent invariance reduces to \(Z\) reduced.
@@ -765,7 +770,7 @@ Compatibility with the group law follows on \(J\times J\times Z\).
 Let \(C\) be the reduced singular locus and \(C'=Z'\times_Z C\).
 Both \(C\) and \((C')_{\mathrm{red}}\) have smaller dimension.
 For \(C'\), this holds because each component of \(Z'\) dominates a component of \(Z\),
-and the intersection of each component with \(C'\) is a proper closed subset 
+and the intersection of each component with \(C'\) is a proper closed subset
 (e.g., the generic point of each component is not in the intersection).
 
 Proper excision gives an exact sequence
@@ -824,6 +829,7 @@ Smooth left base change identifies both motives over \(S\) with pullbacks of the
 Symmetric monoidal pullback preserves duality.
 \end{proof}
 
+
 \begin{corollary}\label{cor:absolute-compact-duality}
 Every compact object of \(\SH^G(k)\) is dualizable.
 For every linearly reductive subgroup \(K\subset G\), the genuine
@@ -845,6 +851,8 @@ Note that this assertion about all compact objects concerns the absolute base
 \(\Spec k\). We do not claim it for arbitrary relative compact
 objects over \(S\).
 
+
+
 \subsection{Application to classifying stacks}
 Let \(G\) be a smooth affine group over \(k\), and put \(B=BG_S\), \(f:B\to S\).
 Write \(\Delta:B\to B\times_S B\) for the diagonal and \(q_1,q_2\) for the projections.
@@ -864,15 +872,14 @@ If \(\Delta_\sharp\one_B\) is dualizable, then \(\mu_f\) is invertible, with
 \begin{equation}\label{eq:new-mu-inverse}
  \mu_f^{-1}\simeq q_{1\sharp}D(\Delta_\sharp\one_B).
 \end{equation}
-In particular, this holds for every smooth affine linearly reductive group over a field of characteristic zero, 
+In particular, this holds for every smooth affine linearly reductive group over a field of characteristic zero,
 under the base conventions of this paper.
 \end{theorem}
 \begin{proof}
 Apply Lemma~\ref{lem:section} with \(l=\Delta\), \(p=q_1\).
 For the final assertion, apply Proposition~\ref{prop:geometric-duality} to the smooth affine \(G \times G\)-scheme
 \(G\), with action \((g,h)\cdot x=gxh^{-1}\).
-Since \([G/(G\times G)]\simeq BG\),
-\(\Delta_{k\sharp}\one_{BG}\) is dualizable.
+Since \([G / (G \times G)] \simeq BG\), \(\Delta_{k\sharp} \one_{BG_S} \) is dualizable.
 Pullback preserves dualizable objects, so the same conclusion holds over \(S\).
 \end{proof}
 
@@ -922,15 +929,14 @@ Ambidexterity gives \(\Delta_\sharp=\Delta_*\), and therefore
 \(\mu_f=q_{1*}\Delta_*\one=\one\).
 
 For the torus, first consider a line bundle \(V\) on \(Y\).
-Write \(p:V^\times\to Y\) for the complement of its zero
-section, and set \(A=p_\sharp\one_{V^\times}\).
+Let \(A\) be the relative suspension spectrum of its complement of zero.
 Purity gives \(A\to\one_Y\to\Th(V)\).
 Dualizing and rotating gives
 \[
  DA\simeq A\otimes\Th(-V)\otimes S^{1,0}.
 \]
 The projection formula gives
-\[A\otimes\Th(-V) \simeq p_{\sharp}(p^*\Th(-V)) \simeq p_{\sharp}S^{-2, -1} 
+\[A\otimes\Th(-V) \simeq p_{\sharp}(p^*\Th(-V)) \simeq p_{\sharp}S^{-2, -1}
 \simeq A\otimes S^{-2,-1}.\]
 The second equivalence follows from the fact that the tautological section trivializes \(V\)
 on the complement of 0.
@@ -974,6 +980,113 @@ Applying \(q_{1*}\) and the projection formula for the sphere coefficient yields
 \]
 \end{proof}
 
+The finite \'etale and split-torus calculations also determine
+the twist when the identity component is a central split torus.
+
+\begin{lemma}[A central split torus as identity component]
+\label{lem:explicit-central-torus-twist}
+Let \(K\) be a smooth affine linearly reductive group over a
+field \(k\) of characteristic zero. Suppose that
+\(T=K^\circ\) is central in \(K\), and choose an isomorphism
+\(T\simeq\Gm^d\).
+Then
+\[
+ \mu_K\simeq S^{d,d}_{BK_S}.
+\]
+The extension \(1\to T\to K\to K/T\to1\) need not split.
+\end{lemma}
+
+\begin{proof}
+We will calculate the dual of the diagonal motive and then
+apply the first projection's direct image to identify
+\(\mu_K\).
+
+Put \(B=BK_S\), let
+\(\Delta_K:B\to B\times_S B\) be the diagonal, and write
+\[
+ \mathcal X=B\times_S B,
+ \qquad
+ q_1:\mathcal X\to B,
+ \qquad
+ L=\Delta_{K\sharp}\one_B.
+\]
+Our first goal is to prove
+\[
+ DL\simeq L\otimes S^{-d,-d}_{\mathcal X}.
+\]
+
+Let \(F=K/T\), which is finite \'etale, and form
+\[
+ \mathcal Z
+ =\mathcal X\times_{BF_S\times_S BF_S}BF_S,
+\]
+where the map from \(BF_S\) is its diagonal.
+The diagonal of \(B\) factors as
+\[
+ B\xrightarrow{t}\mathcal Z
+  \xrightarrow{a}\mathcal X.
+\]
+The map \(a\) is finite \'etale, since it is a base change
+of the diagonal of \(BF_S\).
+
+We next identify \(t\) as a split-torus torsor.
+An object of \(\mathcal Z\) consists of two \(K\)-torsors
+together with an isomorphism of their associated \(F\)-torsors.
+Lifts of this isomorphism to the \(K\)-torsors exist fppf
+locally and form a torsor under the corresponding twist of
+\(T\) by conjugation. Since \(T\) is central in \(K\), this
+twist is canonically \(T_{\mathcal Z}\). Thus \(t\) is a
+\(T_{\mathcal Z}\)-torsor.
+
+The chosen coordinates on \(T\) express \(t\) as a fiber
+product of complements of zero in \(d\) line bundles on
+\(\mathcal Z\). Put \(A=t_\sharp\one_B\).
+Smooth base change and the projection formula express \(A\)
+as the tensor product of their relative motives.
+The line-bundle calculation in the proof of
+Proposition~\ref{prop:new-finite-torus-twists} therefore gives
+\[
+ DA\simeq A\otimes S^{-d,-d}_{\mathcal Z}.
+\]
+That calculation is compatible with pullback and
+isomorphisms of line bundles, so it applies on the lisse
+site of \(\mathcal Z\).
+
+Since \(L=a_\sharp A\), closed adjunction and finite
+\'etale ambidexterity give
+\[
+ \begin{aligned}
+ DL
+ &\simeq a_*DA\\
+ &\simeq a_\sharp DA\\
+ &\simeq a_\sharp
+       \bigl(A\otimes a^*S^{-d,-d}_{\mathcal X}\bigr)\\
+ &\simeq L\otimes S^{-d,-d}_{\mathcal X}.
+ \end{aligned}
+\]
+Here finite \'etale ambidexterity is the case of
+\cite[Theorem~6.9]{Hoyois} with zero relative tangent bundle,
+applied on smooth scheme charts; the last equivalence is
+the smooth projection formula.
+
+It remains to recover the twist.
+Closed adjunction gives \(DL\simeq\Delta_{K*}\one_B\).
+Using \(q_1\Delta_K=\mathrm{id}_B\), the definition of
+\(\mu_K\), and the projection formula for the invertible
+sphere coefficient, we obtain
+\[
+ \begin{aligned}
+ \one_B
+ &\simeq q_{1*}\Delta_{K*}\one_B\\
+ &\simeq q_{1*}DL\\
+ &\simeq q_{1*}L\otimes S^{-d,-d}_B\\
+ &\simeq \mu_K\otimes S^{-d,-d}_B.
+ \end{aligned}
+\]
+Tensoring with \(S^{d,d}_B\) proves the assertion.
+\end{proof}
+
+
 Let \(B_0=T\ltimes U\) be a split connected solvable group, with \(T=\Gm^r\) and \(U\) split unipotent.
 The example needed below is a Borel subgroup of a split reductive group.
 All operations for \(BB_0\) in the next two results are lisse operations.
@@ -1011,7 +1124,7 @@ Apply the first projection's direct image, as in Proposition~\ref{prop:new-finit
 \subsection{A proper restriction formula}
 \begin{proposition}\label{prop:new-proper-restriction}
 Let \(C\) and \(B\) be smooth stacks over \(S\) with smooth diagonals.
-Let \(r:C\to B\) be a representable smooth proper \(S\)-morphism.
+Let \(r:C\to B\) be representable, smooth, and proper over \(S\).
 Suppose the diagonal motives of \(C\) and \(B\) are dualizable.
 For their respective twists,
 \begin{equation}\label{eq:new-proper-restriction}
@@ -1054,9 +1167,9 @@ where \(p\) is the projection \(p: C \times_S B \to C.\)
 Apply \(p_*\).
 On the left, \(DL_l=l_*\one\), so \(p_*DL_l=\one\).
 The right hand side tangent coefficient is invertible, and hence satisfies the ordinary projection formula.
-Smooth base change along \(r\) gives 
+Smooth base change along \(r\) gives
 \[p_*L_l =
-p_* l_{\sharp} r^* \one_B 
+p_* l_{\sharp} r^* \one_B
 \simeq r^* q_{1*} \Delta_{B\sharp} \one_B
 = r^*\mu_B .\]
 Thus
@@ -1073,9 +1186,9 @@ Then
 \begin{equation}\label{eq:new-borel-restriction}
  b^*\mu_G\simeq S^{r,r}\otimes\Th(T_b).
 \end{equation}
-For a \(G\)-torsor on \(X\) with a \(B_0\) reduction \(Q\), 
+For a \(G\)-torsor on \(X\) with a \(B_0\) reduction \(Q\),
 let \(u: X \to BB_0\) be the map that classifies the reduction \(Q\).
-Let \(E\) be its associated vector bundle with fiber 
+Let \(E\) be its associated vector bundle with fiber
 \(\mathfrak g/\mathfrak b_0\), i.e., \(E = Q \times^{B_0} (\mathfrak{g}/\mathfrak{b}_0)\).
 Then the pullback of \(\mu_G\) on \(X\) is \(S^{r,r}\otimes\Th(E)\).
 In particular, at the trivial torsor \(e:S\to BG\),
@@ -1092,25 +1205,26 @@ At the trivial torsor it is a constant vector space.
 \end{proof}
 
 This is saying that when ignoring the group action, the twist \(\mu_G\) is a constant sphere.
-The following example shows the group action on \(\mu_G\) itself can be nontrivial. 
+The following example shows the group action on \(\mu_G\) itself can be nontrivial.
 
 \begin{example}[A split group with a nontrivial twist]\label{ex:new-gl2-twist}
 Take \(k=\mathbb C\), \(X=\Pj^1\). The \(GL_2\) torsor of frames of
-\(V=\mathcal O_X\oplus\mathcal O_X(1)\) is 
+\(V=\mathcal O_X\oplus\mathcal O_X(1)\) is
 \[
 \operatorname{Fr}(V)
 =
 \underline{\operatorname{Isom}}_X
 \bigl(\mathcal O_X^{\oplus 2},V\bigr).
 \]
+The line \(\mathcal O_X\subset V\) gives a reduction to the upper triangular Borel \(B_0\).
+
 Let \(Q\subset\operatorname{Fr}(V)\) be the \(B_0\)-torsor of
 frames carrying the first coordinate line to
 \(\mathcal O_X\subset V\).
 The associated relative tangent line bundle is
 \[
  E=Q\times^{B_0}(\mathfrak{gl}_2/\mathfrak b_0)
- \simeq
- \operatorname{Hom}(\mathcal O_X,V/\mathcal O_X)
+ \simeq \operatorname{Hom}(\mathcal O_X,V/\mathcal O_X)
  \simeq \mathcal O_X(1).
 \]
 The first isomorphism identifies tangent vectors to the flag
@@ -1123,8 +1237,8 @@ Lemma~\ref{lem:new-borel-twist} therefore give
 \]
 This is not \(S^{4,3}\).
 
-Indeed, an equivalence \(\Th_X(\mathcal O_X(1))\simeq S^{2,1}\) would, 
-after smooth pushforward along \(X\to k\), 
+Indeed, an equivalence \(\Th_X(\mathcal O_X(1))\simeq S^{2,1}\) would,
+after smooth pushforward along \(X\to k\),
 identify the two absolute Thom spectra.
 With \(\mathbb F_2\)-coefficients, each has a unique nonzero class in bidegree \((2,1)\).
 Voevodsky's Thom formula states
@@ -1187,11 +1301,16 @@ Their integral homology differs, which contradicts the displayed equivalence.
 \end{example}
 
 The exact Picard class of \(\omega_T\) for an arbitrary torus is a further question.
-We do not need it in this paper. 
+We do not need it in this paper.
 
 \section{Finite detection and the finite Adams theorem}\label{sec:reduction}
 
-The next result reduces an arbitrary torsor to a finite subgroup,
+The next result extends the finite-reduction theorem of
+Chernousov--Gille--Reichstein over algebraically closed fields
+\cite[Corollary~1.4]{CGR08} to the generality needed here:
+the group may be disconnected, and the characteristic-zero
+base field need not be algebraically closed.
+It reduces an arbitrary torsor to a finite subgroup,
 up to passing to a Nisnevich neighborhood on its base.
 It will give the compact generators on which we test the Adams norm.
 
@@ -1216,6 +1335,9 @@ We do not need the exact upper bound on order of \(H\).
 Here \(H^1(F,G)\) is the pointed set of isomorphism classes of \(G\)-torsors for the fppf topology.
 Surjectivity says that one subgroup \(H\), chosen over \(k\), works over all extensions \(F\).
 This uniformity is needed for constructing a Nisnevich local section.
+
+
+
 
 \begin{lemma}\label{lem:torsor-reduction}
 Let \(P\to V\) be a right \(G\)-torsor.
@@ -1247,7 +1369,7 @@ there is an étale neighborhood \((V',v')\to(V,v)\) with
 \begin{proof}
 This is the étale slice statement \cite[Tag~057G]{Stacks}.
 We include the argument here for completeness.
-Choose étale coordinates \(\phi: W\to\A^n_{V_0}\) near \(y\), 
+Choose étale coordinates \(\phi: W\to\A^n_{V_0}\) near \(y\),
 where \(V_0\) is an open neighborhood of \(v\).
 Such coordinates exist by \cite[Tag~039Q]{Stacks}.
 Write the coordinates of \(\phi(y)\) by \((\bar a_1,\ldots,\bar a_n)\in\kappa(v)^n.\)
@@ -1303,6 +1425,7 @@ Finally adjunction gives
 \]
 \end{proof}
 
+
 \subsection{The finite group input}\label{sec:finite}
 
 We explain exactly how the finite group theorem enters the proof.
@@ -1348,8 +1471,8 @@ Let \(\mathcal K=\ker(i^*)\).
 The essential image of \(i_*\) is the right orthogonal \(\mathcal K^\perp\).
 To see this description directly, the unit \(Z\to i_*i^*Z\) has cofiber in \(\mathcal K\).
 Every object in the image of \(i_*\) is right orthogonal to \(\mathcal K\), by adjunction.
-Conversely, if \(Z\) is in \(\mathcal K^\perp\), its cofiber belongs to both \(\mathcal K\) and \(\mathcal K^\perp\), so is zero. 
-This shows that \(Z \simeq i_*i^*Z\) is in the image of \(i_*\). 
+Conversely, if \(Z\) is in \(\mathcal K^\perp\), its cofiber belongs to both \(\mathcal K\) and \(\mathcal K^\perp\), so is zero.
+This shows that \(Z \simeq i_*i^*Z\) is in the image of \(i_*\).
 
 The dual \(DE_\alpha\) is free.
 Indeed, a duality triangle makes it a retract of
@@ -1461,6 +1584,8 @@ Finally, both \(h_\sharp\) and \(h_*^{\cont}\) preserve colimits.
 The equivalence on compact objects extends by Lemma~\ref{lem:continuous}.
 \end{proof}
 
+
+
 \section{The diagonal norm and the Adams isomorphism}\label{sec:norm}
 
 \subsection{Construction of the map}
@@ -1501,20 +1626,9 @@ Finite étale ambidexterity gives
 \]
 Thus Proposition~\ref{prop:finite-adams} applies to exactly this construction.
 
-For comparison with
-\cite[Notation~1.3.1 and Constructions~1.3.5--1.3.8]{RaksitTate},
-let \(\mathfrak g_B\) be the adjoint bundle on \(B=BG_S\).
-Smooth purity
-\cite[Corollary~4.25]{ChowdhuryDAngelo} gives
-\[
- \begin{aligned}
- \delta_f^{\mathrm{Rak}}
-   &\simeq\mu_f\otimes\Th(-\mathfrak g_B),\\
- \omega_f^{\mathrm{Rak}}
-   &\simeq\Th(-\mathfrak g_B),\\
- \nu_f^{\mathrm{Rak}}&\simeq\mu_f.
- \end{aligned}
-\]
+The norm follows the construction in
+\cite[Notation~1.3.1 and Construction~1.3.5]{RaksitTate},
+with the adjustment between smooth and exceptional pushforwards.
 
 \subsection{The graph calculation}
 Choose \(H\subset G\) by Theorem~\ref{thm:finite-subgroup}, and write
@@ -1728,13 +1842,13 @@ Consequently,
 \]
 After identifying the source by \(\alpha_Y\), this is exactly
 the last expression in \eqref{eq:norm-pasting}.
-Note that \(w_N\circ q_\sharp\epsilon_N\) is the
+Note that \(w_N\circ q_\sharp\epsilon_N\) is the the
 \(f^*\dashv f_*\) adjoint of \(f_*(w_N)\circ\nu_f(r_\sharp N)\).
 So by passing to the adjoint of \eqref{eq:norm-pasting}, we obtain
 \begin{equation}\label{eq:norm-transitivity}
  f_*(w_N)\circ\nu_f(r_\sharp N)=\nu_h(K\otimes N).
 \end{equation}
-This says that 
+This says that
 \begin{quote}
 \itshape
 The norm for \(G\), evaluated on an object induced from \(H\), agrees with the norm for \(H\)
@@ -1817,11 +1931,10 @@ If \(P\) is smooth over \(S\), then \(P/G\) is smooth over \(S\).
 A smooth scheme chart \(X\to BG_S\) is therefore the same datum as
 a \(G\)-torsor \(P\to X\) whose total space is smooth over \(S\).
 Morphisms of charts correspond to equivariant maps of their total spaces.
-One may allow algebraic space charts first and then use a
-Nisnevich cover by schemes.
-See \cite[Remark~12.23(iii)]{KhanRaviStacks}.
-Conversely, smooth charts \(X\to BG_S\) with \(X\) affine form a Nisnevich basis. 
-Their associated torsors \(P\to X\) have smooth equivariantly quasiprojective total spaces over \(S\), 
+One may allow algebraic space charts first and then use a Nisnevich cover
+by schemes. See \cite[Example 12.23(iii)]{KhanRaviStacks}.
+Conversely, smooth charts \(X\to BG_S\) with \(X\) affine form a Nisnevich basis.
+Their associated torsors \(P\to X\) have smooth equivariantly quasiprojective total spaces over \(S\),
 so they belong to the genuine category.
 
 Under this identification, equivariant Nisnevich squares of free schemes
@@ -1899,6 +2012,7 @@ also becomes an equivalence.
 The same argument applies to Nisnevich relations, because their
 defining squares remain distinguished after pullback to free schemes.
 
+
 Left extension and restriction commute with tensoring by representation
 spheres and their restrictions.
 Thus the adjunction and its identity unit pass through pointing and
@@ -1966,6 +2080,14 @@ For \(V\in\mathcal A_S\), evaluation therefore gives
  \operatorname{Hom}_{G,k}(V,U).
 \]
 
+If \(V\) is free, it belongs to \(\mathcal A_k^{\mathrm{fr}}\).
+Here we use that \(S/k\) is smooth and quasiprojective.
+The pair \((V,\mathrm{id}_V)\) is initial in the category \(\mathcal A_k^{\mathrm{fr}}\),
+so the colimit is contractible.
+If \(V\) is not free, that category is empty.
+Indeed, an equivariant map to a free scheme forces every stabilizer
+functor in the source to be trivial.
+We have proved \(p^*F_k\simeq F_S\).
 Pullback preserves the relations used in motivic localization.
 It also commutes with suspension spectra.
 This gives \(p^*E_k\simeq E_S\).
@@ -2108,15 +2230,107 @@ by construction and therefore holds everywhere by left Kan extension.
 \end{proof}
 
 The continuous/ordinary distinction has a topological counterpart in
-the difference between genuine Adams duality and the norm to homotopy
+the difference between genuine Adams and the norm to homotopy
 fixed points; see
 \cite[Theorem~5.2.5 and Remark~5.2.6]{RognesDualizable}.
 A related formal approach uses the compactness locus of a geometric
 functor \cite[Theorems~1.4 and~2.9, Section~3]{SandersAdams}.
 We do not apply its rigid-compactness hypotheses to the lisse category.
-For another abstract treatment of Adams isomorphisms, based
-on equivariant semiadditivity, see
-\cite[Theorems~4.8 and~5.2]{CLLAdams}.
+
+\begin{corollary}[Free torsors for split reductive groups]
+\label{cor:explicit-free-reductive-splitting}
+Let \(G\) be split connected reductive of dimension \(n\)
+and rank \(r\), and let \(S\) be smooth and quasiprojective
+over \(k\), with trivial \(G\)-action.
+Let \(p:Z\to S\) be smooth and quasiprojective, and let
+\(P\to Z\) be a right \(G\)-torsor.
+We regard \(P\) as a left \(G\)-scheme by
+\(g\cdot p_0=p_0g^{-1}\).
+Suppose that \(P\) has a reduction \(Q\) to a split Borel
+subgroup \(B_0\subseteq G\), and put
+\[
+ E=Q\times^{B_0}(\mathfrak g/\mathfrak b_0).
+\]
+Then
+\[
+ (\Sigma_G^\infty P_+)^G
+ \simeq S^{r,r}\otimes p_\sharp\Th_Z(E).
+\]
+For the trivial torsor this becomes
+\[
+ \bigl(\Sigma_G^\infty(Z\times_S G_S)_+\bigr)^G
+ \simeq S^{n,(n+r)/2}\otimes\Sigma^\infty Z_+.
+\]
+\end{corollary}
+
+\begin{proof}
+We will apply the genuine Adams isomorphism to the free
+suspension spectrum of \(P\), then compute the resulting
+twist using the specified Borel reduction.
+
+Let \(u:Z\to BG_S\) classify \(P\), and let
+\(f:BG_S\to S\) be the structure map, so that \(fu=p\).
+The free-site comparison of
+Section~\ref{sec:genuine-comparison} identifies
+\[
+ \Sigma_G^\infty P_+\simeq i_!u_\sharp\one_Z.
+\]
+Here \(u\) is smooth: its base change along the standard
+atlas \(S\to BG_S\) is the smooth morphism \(P\to S\).
+Applying Corollary~\ref{cor:genuine-adams-repaired} and
+the smooth projection formula gives
+\[
+ \begin{aligned}
+ (\Sigma_G^\infty P_+)^G
+ &\simeq f_\sharp(u_\sharp\one_Z\otimes\mu_G)\\
+ &\simeq f_\sharp u_\sharp(u^*\mu_G)\\
+ &\simeq p_\sharp(u^*\mu_G).
+ \end{aligned}
+\]
+By Corollary~\ref{cor:new-split-reductive}, the chosen
+Borel reduction \(Q\) identifies
+\[
+ u^*\mu_G
+ \simeq S^{r,r}\otimes
+ \Th_Z\bigl(Q\times^{B_0}(\mathfrak g/\mathfrak b_0)\bigr)
+ = S^{r,r}\otimes\Th_Z(E).
+\]
+The projection formula for \(p_\sharp\) proves the
+first assertion.
+
+For the trivial torsor, choose the trivial Borel reduction.
+Then \(E\) is a trivial vector bundle of rank \((n-r)/2\).
+Consequently,
+\[
+ S^{r,r}\otimes\Th_Z(E)
+ \simeq S^{n,(n+r)/2}_Z.
+\]
+Applying \(p_\sharp\) and using
+\(p_\sharp\one_Z=\Sigma^\infty Z_+\) proves the second
+assertion.
+\end{proof}
+
+\begin{example}[Classical split reductive groups]
+With \(S=Z=\Spec k\),
+Corollary~\ref{cor:explicit-free-reductive-splitting} gives
+\[
+ \begin{aligned}
+ (\Sigma_{\mathrm{GL}_m}^\infty(\mathrm{GL}_m)_+)
+       ^{\mathrm{GL}_m}
+ &\simeq S^{m^2,m(m+1)/2},\\
+ (\Sigma_{\mathrm{SL}_m}^\infty(\mathrm{SL}_m)_+)
+       ^{\mathrm{SL}_m}
+ &\simeq S^{m^2-1,(m^2+m-2)/2},\\
+ (\Sigma_{\mathrm{Sp}_{2m}}^\infty(\mathrm{Sp}_{2m})_+)
+       ^{\mathrm{Sp}_{2m}}
+ &\simeq S^{m(2m+1),m(m+1)}.
+ \end{aligned}
+\]
+Here \(m\geq1\) in the first and third formulas and
+\(m\geq2\) in the second, and the groups act freely by
+translation.
+\end{example}
+
 
 \section{Families and geometric fixed points}
 \label{sec:isotropy}
@@ -2157,6 +2371,7 @@ These assertions include disconnected groups. See
 \cite[Proposition 5.4.1]{ConradReductive}.
 Thus the conjugacy class of \(L\) inside \(G\) is well defined.
 We call it the \emph{Levi class} of the stabilizer.
+
 
 A \emph{geometric family} \(\F\) specifies the allowed Levi classes.
 For each algebraically closed extension \(\Omega/k\), it gives a set
@@ -2317,7 +2532,7 @@ localization.
 \subsection{Families and dualizable approximations}
 
 The following approximation will let us apply duality with arbitrary
-relative coefficients. 
+relative coefficients.
 Write \(e_{\F,S}\) when the base of the family object needs to be shown.
 
 \begin{lemma}\label{lem:new-family-approx}
@@ -2362,6 +2577,7 @@ Induction and duality of dualizable objects commute with base change
 to \(S\). This proves the claim.
 \end{proof}
 
+
 \subsection{Normal subgroups}
 
 Let \(N\triangleleft G\) be a closed normal subgroup and put
@@ -2394,11 +2610,6 @@ fields \(\Omega\hookrightarrow\Omega'\), faithful flatness gives
  [H_{\Omega'}]\in\F[N](\Omega').
 \]
 We denote this geometric family by \(\F[N]\).
-We write
-\[
- L_NM:=\widetilde e_{\F[N]}\otimes M
-\]
-for the associated localization.
 
 \begin{lemma}\label{lem:fixed-scheme-functor}
 Fixed schemes induce a colimit-preserving symmetric monoidal functor
@@ -2471,7 +2682,7 @@ Hence fixed schemes preserve Nisnevich distinguished squares.
 
 These geometric checks imply that \(R\) respects the motivic
 relations, even without assuming \(X^N\in\mathcal C_Q\).
-Indeed, to prove that a map of presheaves is a motivic equivalence, 
+Indeed, to prove that a map of presheaves is a motivic equivalence,
 it is enough to prove this after pulling it back to every representable presheaf over its target.
 Pull each relation back along \(h_T\to h_{X^N}\), with
 \(T\in\mathcal C_Q\).
@@ -2518,6 +2729,7 @@ Suspending and taking the stable adjoint gives
 where the target uses genuine fixed points, the right adjoint
 to genuine inflation.
 
+
 \begin{theorem}[Localized inflation]\label{thm:normal-inflation}
 The functor
 \[
@@ -2548,7 +2760,7 @@ there is an \(N\)-equivariant exact sequence
  \longrightarrow 0.
 \]
 The group \(N\) acts trivially on \(Z\).
-The tangent-space description of fixed schemes identifies
+Explicit computations on tangent vectors identifies
 \(T_{Z/S}\) with \((T_{X/S}|_Z)^N\).
 See also \cite[Theorem~13.1 and \S13.12]{MilneAG}.
 Taking invariants is exact because \(N\) is linearly reductive.
@@ -2804,7 +3016,7 @@ fixed vector under its stabilizer.
 \end{lemma}
 
 \begin{proof}
-We prove that \(j\) is a closed immersion 
+We prove that \(j\) is a closed immersion
 by checking this on Luna slice charts.
 We first work over an algebraically closed field.
 
@@ -2886,8 +3098,7 @@ where \(H_v\) is the subgroup scheme fixing \(v\).
 
 On every geometric fiber, the inclusion
 \(g^{-1}H_Tg\hookrightarrow H_T\) is an isomorphism.
-Both group schemes are smooth and finitely presented over
-\(T\), so the fiberwise isomorphism criterion gives
+Consequently,
 \[
  g^{-1}H_Tg=H_T.
 \]
@@ -2911,48 +3122,15 @@ The canonical isomorphisms
 send \([g,[n,v]]\) to \([gn,v]\).
 Under these identifications, \(j_{X'}\) is the map induced
 by \(V^H\hookrightarrow V\).
-Thus \(j_{X'}\) is a closed immersion.
-
-The invariant neighborhoods used above cover \(X\):
-a nonempty invariant closed complement would contain a closed
-orbit, contradicting their construction.
-On a chart with \(K\subsetneq H\), every stabilizer is
-conjugate to a subgroup of \(K\), so every Levi class is
-strictly below \([H]\).
-On a chart with \(K=H\), the image is \(G\times_HV^H\).
-Its stabilizers are conjugate to \(H\), whereas every
-stabilizer in its complement is conjugate to a proper
-subgroup of \(H\).
-The Levi classes in that complement are therefore strictly
-below \([H]\).
-
-The normal bundle on this chart is induced from
-\(N_{V^H/V}\).
-Since
-\[
- T(V^H)=(TV|_{V^H})^H
-\]
-and taking \(H\)-invariants is exact, we have
-\[
- (N_{V^H/V})^H=0.
-\]
-This proves the assertion about the normal representations.
-
-Moreover, \(X^H\) is smooth over \(S\) by
-\cite[Theorem~4.3.6]{RomagnyFixedPoints}.
-The \(N_H\)-torsor
-\[
- G\times X^H\longrightarrow G\times_{N_H}X^H
-\]
-then shows that the source of \(j\) is smooth over \(S\).
+Therefore this shows that \(j_{X'}\)
+is a closed immersion.
 
 For a general characteristic-zero field \(k\), apply the
 argument after extension to an algebraic closure.
-Fixed schemes, associated bundles, and normal bundles
-commute with this extension.
-Faithfully flat descent gives the closed immersion and
-smoothness assertions over \(k\); the remaining assertions
-are geometric and have already been checked.
+Fixed schemes and associated bundles commute with this
+extension.
+Faithfully flat descent then proves that \(j\) is a closed
+immersion over \(k\).
 \end{proof}
 
 \begin{corollary}\label{cor:affine-layer}
@@ -3110,7 +3288,7 @@ Indeed, an \(H\)-fixed geometric point \([g,y]\) satisfies
 \[
  H\subset gHg^{-1}.
 \]
-The same arguments as in Lemma~\ref{lem:affine-maximal-locus} 
+The same arguments as in Lemma~\ref{lem:affine-maximal-locus}
 show that the inclusion is an equality and \(g\in N_H\).
 It identifies
 \[
@@ -3294,6 +3472,7 @@ The family filtration is exhaustive.
 
 \begin{proof}
 
+
 Let
 \[
  \mathcal C=
@@ -3312,15 +3491,15 @@ To prove the reverse inclusion, it suffices to show that
 
 We may reduce to the case where \(X\) is affine over \(k\)
 by the arguments given in the beginning of Section~\ref{sec:isotropy}.
+Choose an ordinary affine Jouanolou bundle \(S'\to S\).
 
 We construct invariant open neighborhoods belonging to
 principal families.
-Let \(x\in X(k)\) have closed orbit, and put \(H_x=G_x\).
-Such a point is defined over \(k\) because \(k\) is
-algebraically closed.
-The stabilizer \(H_x\) is reductive by
+Let \(x\in X(k)\) have closed orbit, and put \(H=G_x\).
+Such a point is defined over \(k\) because \(k\) is algebraically closed.
+The stabilizer \(H\) is reductive by
 \cite[I.2, Proposition]{Luna}.
-Its Levi class is therefore \([H_x]\), so \([H_x]\in\F\).
+Its Levi class is therefore \([H]\), so \([H]\in\F\).
 
 Luna's slice theorem gives an invariant open neighborhood
 \(U_x\subset X\) of the orbit such that every geometric
@@ -3348,24 +3527,7 @@ By quasicompactness, we obtain a finite cover
  \quad [H_i]\in\F.
 \]
 
-Every finite intersection in this cover belongs to each
-principal family associated with an open containing it.
-Nisnevich excision, applied to the finite cover, therefore
-gives \(\Sigma^\infty_GX_+\in\mathcal C\).
-
-The subcategory \(\mathcal C\) is a tensor ideal:
-each \(J_{\F_{\leq H}}\) is a tensor ideal, and tensoring
-preserves colimits.
-Consequently, the representation desuspensions of these
-suspension spectra also lie in \(\mathcal C\).
-They generate \(J_\F\), so \(J_\F\subseteq\mathcal C\).
-Together with the reverse inclusion proved above, this gives
-\(\mathcal C=J_\F\).
-
-Finally, \(e_{\varnothing}=0\) and \(e_{\mathrm{all}}=\one\).
-Applying the generation statement to the family of all
-linearly reductive classes shows that the family filtration
-is exhaustive.
+Nisnevich excision therefore implies that the filtration is exhaustive.
 \end{proof}
 
 The partial order of \(k\)-defined reductive subgroups, modulo
@@ -3468,6 +3630,7 @@ Thus the stated functors jointly detect zero objects.
 They are exact, so applying this conclusion to the cofiber
 of a morphism proves joint conservativity.
 \end{proof}
+
 
 \section{Splitting a filtration indexed by a poset}
 \label{sec:splitting}
@@ -3836,6 +3999,7 @@ provide the filtration and identify its layers.
 The next section constructs the supported sections needed to apply
 Corollary~\ref{cor:tensor-layer-splitting}.
 
+
 \section{Normalizer transfer and tom Dieck splitting}
 \label{sec:td-splitting}
 
@@ -3883,13 +4047,6 @@ Proposition~\ref{prop:normal-family} gives, compatibly with augmentations,
 \end{equation}
 Here \(e_W\) is the universal free \(W\)-object.
 
-We write
-\[
- \mathcal D_{N,\le H}
- :=e_{\le H}^N\otimes\mathcal D_N
-\]
-for the full subcategory supported on the principal family
-\(\F_{\le H}\) in \(N\).
 \begin{lemma}\label{lem:td-induction-unit}
 For \(C\in\mathcal D_{N,\le H}\), the induction unit induces an
 equivalence
@@ -4031,9 +4188,9 @@ identity under the unit identifications.
 Put \(B=PA\). By Lemma~\ref{lem:fixed-scheme-functor},
 \(B\) is the suspension spectrum of
 \(((G/N)^H\times S)_+\).
-The fixed scheme \((G/N)^H\) is smooth.
-
-The identity coset therefore gives decompositions
+The proof of Lemma~\ref{lem:td-induction-unit} shows that the
+identity coset is open and closed in \((G/N)^H\).
+It therefore gives decompositions
 \[
  B\simeq\one\oplus B',
  \qquad
@@ -4468,23 +4625,169 @@ These descended opens cover, so the same Nisnevich gluing argument
 applies. This descends open subsets before using motivic categories.
 \end{remark}
 
-\begin{remark}
-For a finite constant group of invertible order, the noncommutative
-splitting is already \cite[Theorem 7.4]{GH}, specialized to \(N=G\);
-their Definitions 7.1 and 7.3 specify the splitting data and the
-geometric orbit functor. Their Proposition 4.12 computes the
-adjacent-family maps, and Example 7.2 gives suspension spectra.
-That theorem holds under its stated finite-group base hypotheses.
-The positive dimensional proof above instead uses the normalized
-transfer on the pure stratum; it does not assert a global
-induction-coinduction equivalence.
-\end{remark}
+
+\subsection{Explicit splittings in positive dimension}
+
+We now combine Theorem~\ref{thm:td-general} with the twist
+calculations of Section~\ref{sec:new-twist}.
+In particular,
+Lemma~\ref{lem:explicit-central-torus-twist} identifies
+the twists for groups whose identity components are
+central split tori.
+
+\begin{corollary}[Split diagonalizable groups and split tori]
+\label{cor:explicit-diagonalizable-splitting}
+
+Let \(k\) be a field of characteristic zero (not necessarily algebraically closed),
+let \(G\) be a split diagonalizable group of positive dimension, and let
+\(S\) be smooth and quasiprojective over \(k\), with trivial
+\(G\)-action. For each closed subgroup scheme \(H\subseteq G\),
+put
+\[
+ W_H=G/H,\qquad d_H=\dim(G/H).
+\]
+For every \(G\)-split spectrum \(X\in\SH^G(S)\), there is
+an equivalence
+\[
+ X^G\simeq
+ \bigoplus_{H\subseteq G}
+ S^{d_H,d_H}\otimes
+ \bigl(i_{W_H}^*\Phi_G^H X\bigr)_{hW_H}.
+\]
+In particular, for a based motivic \(G\)-space \(Y\),
+\[
+ (\Sigma_G^\infty Y)^G\simeq
+ \bigoplus_{H\subseteq G}
+ S^{d_H,d_H}\otimes
+ \bigl(i_{W_H}^*\Sigma_{W_H}^\infty Y^H\bigr)_{hW_H}.
+\]
+The sums include all closed subgroup schemes, not only the
+connected ones. If \(G=T=\Gm^r\), then \(W_H\) is a split
+torus and \(d_H=r-\dim H\).
+\end{corollary}
+
+\begin{proof}
+We will identify the Weyl groups and their twists,
+then substitute them into the tom Dieck splitting.
+The character-group description of diagonalizable groups
+\cite[Theorem~12.9]{MilneAG} shows that every \(H\) and
+\(G/H\) is split diagonalizable. In characteristic zero,
+\((G/H)^\circ\) is a split torus of rank \(d_H\).
+Since \(G/H\) is commutative,
+Lemma~\ref{lem:explicit-central-torus-twist} gives
+\[
+ \mu_{W_H}\simeq S^{d_H,d_H}_{BW_{H,S}}.
+\]
+Moreover, \(N_G(H)=G\), and conjugacy does not identify
+distinct subgroups.
+
+Apply Theorem~\ref{thm:td-general}, using its extension to
+split diagonalizable groups over arbitrary
+characteristic-zero fields explained after
+Corollary~\ref{cor:td-suspensions}. The smooth projection
+formula moves \(S^{d_H,d_H}\) outside \((-)_{hW_H}\),
+giving the first equivalence. The suspension-spectrum
+identification in Corollary~\ref{cor:td-suspensions}
+gives the second.
+\end{proof}
+
+\begin{example}[The multiplicative group]
+\label{ex:explicit-gm-splitting}
+Under the base hypotheses of
+Corollary~\ref{cor:explicit-diagonalizable-splitting}, let
+\(Y\) be a based motivic \(\Gm\)-space. Then
+\[
+ \begin{aligned}
+ (\Sigma_{\Gm}^\infty Y)^{\Gm}
+ \simeq{}&\Sigma^\infty Y^{\Gm}\\
+ &\oplus\bigoplus_{n\geq1}S^{1,1}\otimes
+ \bigl(i_{\Gm/\mu_n}^*
+       \Sigma_{\Gm/\mu_n}^\infty Y^{\mu_n}\bigr)
+       _{h(\Gm/\mu_n)}.
+ \end{aligned}
+\]
+Indeed, the character-group classification
+\cite[Theorem~12.9]{MilneAG} identifies the proper closed
+subgroups of \(\Gm\) as \(\mu_n\). Each quotient \(\Gm/\mu_n\) is a split
+one-dimensional torus; the remaining subgroup is
+\(H=\Gm\), whose quotient is trivial.
+The formula therefore follows from
+Corollary~\ref{cor:explicit-diagonalizable-splitting}.
+The quotient \(\Gm/\mu_n\) may be identified with \(\Gm\)
+through \(t\mapsto t^n\); the action on \(Y^{\mu_n}\)
+is the residual quotient action.
+\end{example}
+
+\begin{corollary}[Groups with central torus identity component]
+\label{cor:explicit-central-torus-splitting}
+Let \(k\) be algebraically closed of characteristic zero.
+Let \(G\) be a smooth affine linearly reductive group of
+positive dimension whose identity component \(T=G^\circ\)
+is a central torus. Let \(S\) be smooth and quasiprojective
+over \(k\), with trivial \(G\)-action. Put
+\[
+ N_H=N_G(H),\qquad W_H=N_H/H,
+ \qquad d_H=\dim G-\dim H.
+\]
+For every \(G\)-split spectrum \(X\), there is an equivalence
+\[
+ X^G\simeq
+ \bigoplus_{(H)} S^{d_H,d_H}\otimes
+ \bigl(i_{W_H}^*\Phi_{N_H}^H
+             \operatorname{res}_{N_H}^G X\bigr)_{hW_H}.
+\]
+For a based motivic \(G\)-space \(Y\), this specializes to
+\[
+ (\Sigma_G^\infty Y)^G\simeq
+ \bigoplus_{(H)}S^{d_H,d_H}\otimes
+ \bigl(i_{W_H}^*\Sigma_{W_H}^\infty Y^H\bigr)_{hW_H}.
+\]
+The sums run over conjugacy classes of closed linearly
+reductive subgroups. This applies, in particular, to
+\(G=\Gm^r\times F\), with \(r>0\) and \(F\) a finite
+group, without assuming that \(F\) is abelian.
+\end{corollary}
+
+\begin{proof}
+Our goal is to verify that each Weyl group satisfies
+Lemma~\ref{lem:explicit-central-torus-twist}.
+Since \(T\) is central in \(G\), it normalizes \(H\), so
+\(T\subseteq N_H\). The connectedness of \(T\) then gives
+\(T\subseteq N_H^\circ\). Conversely, the inclusion
+\(N_H\subseteq G\) gives \(N_H^\circ\subseteq G^\circ=T\).
+Thus \(N_H^\circ=T\).
+The image \(\overline T\) of \(T\) in \(W_H\) is
+\[
+ \overline T\simeq T/(T\cap H).
+\]
+It is a central split torus by the character-group
+description \cite[Theorem~12.9]{MilneAG}.
+Since \(\overline T\) is connected, it lies in
+\(W_H^\circ\). Conversely, the quotient
+\(W_H/\overline T\) is a quotient of the finite \'etale
+group \(N_H/T=N_H/N_H^\circ\), and hence is finite \'etale.
+The connected group \(W_H^\circ\) therefore maps to the
+identity point of \(W_H/\overline T\), so it is contained
+in the kernel \(\overline T\). Thus
+\(W_H^\circ=\overline T\).
+Also \(H^\circ\subseteq T\), so
+\[
+ \dim W_H^\circ
+ =\dim T-\dim(T\cap H)
+ =\dim G-\dim H=d_H.
+\]
+Lemma~\ref{lem:explicit-central-torus-twist} now gives
+\(\mu_{W_H}\simeq S^{d_H,d_H}\).
+Substitute this in Theorem~\ref{thm:td-general}
+and Corollary~\ref{cor:td-suspensions}, and apply the
+smooth projection formula to each summand.
+\end{proof}
+
 
 \appendix
 \section{A mixed base-change theorem}\label{sec:mixed-bc}
 
-The graph proof of Theorem~\ref{thm:lisse-adams} does not require base change for a fourth adjoint.
-We record such a theorem separately.
+We record a base change theorem for a fourth adjoint separately.
 It applies to the same classifying stack projections.
 
 Let \(g:U\to S\) be smooth and of finite presentation.
@@ -4618,7 +4921,9 @@ It is therefore the canonical fourth-adjoint comparison.
 Evaluating at \(\one_S\) proves the formula for \(\sigma\).
 \end{proof}
 
-\section{Integral invertibility in positive characteristic}
+
+
+\section{Invertibility in positive characteristic}
 \label{subsec:new-charp-twist}
 
 We now remove the characteristic-zero hypothesis from twist invertibility.
@@ -4855,6 +5160,4 @@ An Adams norm equivalence in that generality requires a separate argument.
 \enlargethispage{2\baselineskip}
 \bibliographystyle{amsalpha}
 \bibliography{references}
-\enlargethispage{3\baselineskip}
-
 \end{document}
