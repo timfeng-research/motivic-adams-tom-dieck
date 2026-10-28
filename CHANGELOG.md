@@ -1,5 +1,12 @@
 # Public versions
 
+## v3 — October 28, 2026
+
+- Revised exposition and proofs, including the mixed base-change argument in Appendix A and the compactification arguments in Appendix B.
+- Update the manuscript date and citation metadata. The current manuscript has 59 pages.
+
+Versions 1 and 2 remain available unchanged. All numbered releases are licensed under CC BY 4.0.
+
 ## v2 — October 18, 2026
 
 - Explain the use of “motive” at the beginning of Section 2.
