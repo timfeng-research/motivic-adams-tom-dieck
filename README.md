@@ -4,7 +4,7 @@
 
 **Preprint · Version 3** · Revised and released October 28, 2026 · First released October 8, 2026
 
-[Paper webpage](https://www.timfeng.com/research/motivic-adams-tom-dieck) · [Read version 3 (PDF)](paper.pdf) · [Version 3 downloads](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v3) · [LaTeX source](manuscript/) · [Research catalog](https://github.com/timfeng-research/research)
+[Paper webpage](https://www.timfeng.com/research/motivic-adams-tom-dieck) · [Read version 3 (PDF)](paper.pdf) · [Version 3 downloads](https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v3) · [Zenodo archive](https://zenodo.org/records/23734715) · [LaTeX source](manuscript/) · [Research catalog](https://github.com/timfeng-research/research)
 
 This is the first paper in a planned series on equivariant motivic homotopy theory. See the [series index](https://github.com/timfeng-research/research/blob/main/series/motivic-homotopy.md).
 
@@ -24,7 +24,7 @@ In my view, these strict endorsement requirements create an unnecessary barrier 
 
 Please cite the paper and the version you used:
 
-> Mengzhudong Feng. *Motivic Adams isomorphism and tom Dieck splitting in characteristic zero*. Preprint, version 3, 2026. https://github.com/timfeng-research/motivic-adams-tom-dieck/releases/tag/v3
+> Mengzhudong Feng. *Motivic Adams isomorphism and tom Dieck splitting in characteristic zero*. Preprint, version 3, 2026. DOI: [10.5281/zenodo.23734715](https://doi.org/10.5281/zenodo.23734715).
 
 Machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff). The repository files contain the latest version. Each numbered release preserves its PDF and standalone LaTeX source archive.
 

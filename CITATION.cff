@@ -4,7 +4,9 @@ title: "Motivic Adams isomorphism and tom Dieck splitting in characteristic zero
 authors:
   - family-names: "Feng"
     given-names: "Mengzhudong"
+    orcid: "https://orcid.org/0009-0000-4074-2584"
 license: CC-BY-4.0
+doi: "10.5281/zenodo.23734715"
 version: "3"
 date-released: "2026-10-28"
 url: "https://github.com/timfeng-research/motivic-adams-tom-dieck"
@@ -14,6 +16,8 @@ preferred-citation:
   authors:
     - family-names: "Feng"
       given-names: "Mengzhudong"
+      orcid: "https://orcid.org/0009-0000-4074-2584"
+  doi: "10.5281/zenodo.23734715"
   year: 2026
   version: "3"
   date-released: "2026-10-28"
